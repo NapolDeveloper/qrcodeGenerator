@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  width: 1000px;
+  height: 720px;
+  background-color: white;
+  -webkit-box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container .content-box {
+  position: absolute;
+  left: 0;
+  width: 98%;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+}
+
+.container .side-bar {
+  position: absolute;
+  right: 0;
+  width: 2%;
+  height: 100%;
+  background-color: #ab8fda;
+}

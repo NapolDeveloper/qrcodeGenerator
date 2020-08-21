@@ -1,0 +1,27 @@
+$primaryColor: #333333;
+$containerColor: white;
+
+$side-bar-color: #ab8fda;
+
+.container {
+  position: relative;
+  width: 1000px;
+  height: 720px;
+  background-color: white;
+  box-shadow: -5px 5px 5px rgba($color: #000000, $alpha: 0.3);
+  .content-box {
+    position: absolute;
+    left: 0;
+    width: 98%;
+    height: 100%;
+    background-color: $containerColor;
+    padding: 20px;
+  }
+  .side-bar {
+    position: absolute;
+    right: 0;
+    width: 2%;
+    height: 100%;
+    background-color: $side-bar-color;
+  }
+}
