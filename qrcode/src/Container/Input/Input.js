@@ -26,6 +26,10 @@ export default class Input extends React.Component {
 
   onFormSubmit = (e) => {
     e.preventDefault();
+    if (this.state.text === '') {
+      alert('URL을 입력해 주세요');
+      return;
+    }
     this.props.onSubmit(this.state.text);
   };
 
@@ -34,10 +38,11 @@ export default class Input extends React.Component {
     return (
       <React.Fragment>
         <form className={cx('input-form')} onSubmit={onFormSubmit}>
-          <label>
-            URL : <input type='url' name='urlText' placeholder='https://google.com' onChange={handleChange}></input>
-          </label>
-          <button type='submit'>make</button>
+          <label className={cx('text')}>URL</label>
+          <input className={cx('input-box')} type='url' name='urlText' placeholder='https://google.com' onChange={handleChange}></input>
+          <button className={cx('submit-btn')} type='submit'>
+            <span>생성하기</span>
+          </button>
         </form>
       </React.Fragment>
     );
